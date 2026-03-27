@@ -16,6 +16,9 @@
  * @namespace minecraft:armor_stand
  */
 
+// =============================================================
+//  Main code - initiates 3 separate functions
+// =============================================================
 
 player.onChat("troops", function() {
     player.say("§6I'm starting ... ")    
@@ -29,21 +32,24 @@ player.onChat("troops", function() {
 })
 
 
+// =============================================================
+//  Functions: create and set figures
+// =============================================================
+
 // ===  1. Attacking squad  ===
 function attackers() {
     player.say("§4Creating attackers...")
 
-    // --- 1.1. Layout: 2 lines x 30 figures ---
+    // 1.1. Layout: 2 lines x 30 figures
     let x = -10
 
     for (let eastCounter = 1; eastCounter <= 2; eastCounter++) {
         let z = -29
-    
-        for (let southCounter = 1; southCounter <= 30; southCounter++) {
+            for (let southCounter = 1; southCounter <= 30; southCounter++) {
             // 1.1.1. Spawn and face orientation
             player.execute(`/summon armor_stand "§4Attacker" ~${x} ~0 ~${z}`)
             player.execute(`/tp @e[type=armor_stand, c=1, x=~${x}, y=~0, z=~${z}] ~${x} ~0 ~${z} facing ~0 ~0 ~${z}`)
-
+    
             let search = `@e[type=armor_stand, c=1, x=~${x}, y=~0, z=~${z}]`
 
 
@@ -57,6 +63,7 @@ function attackers() {
             player.execute(`/replaceitem entity ${search} slot.armor.head 0 skull 1 0`)
             player.execute(`/replaceitem entity ${search} slot.weapon.mainhand 0 trident 1 0`)
             player.execute(`/replaceitem entity ${search} slot.weapon.offhand 0 shield 1 0`)
+
             z += 2
         }
 
@@ -64,7 +71,7 @@ function attackers() {
     }
 
 
-    // 1.2. --- Commander of attackers ---
+    // 1.2. Commander of attackers
     player.execute(`/summon armor_stand "§4Commander" ~-6 ~0 ~0`)
     player.execute(`/tp @e[type=armor_stand, c=1, x=~-6, y=~0, z=~0] ~-6 ~0 ~0 facing ~6 ~0 ~0`)
 
@@ -90,7 +97,7 @@ function attackers() {
 function defenders() {
     player.say("§2Creating defenders...")
 
-    // --- 2.1. Defenders: lancers ---
+    // 2.1. Defenders: lancers
     // Layout: 1 line x 30 figures
     let z = -29
 
@@ -98,7 +105,7 @@ function defenders() {
         // 2.1.1. Spawn and face orientation
         player.execute(`/summon armor_stand "§7Lancer" ~10 ~0 ~${z}`)
         player.execute(`/tp @e[type=armor_stand, c=1, x=~10, y=~0, z=~${z}] ~10 ~0 ~${z} facing ~0 ~0 ~${z}`)
-
+    
         let search = `@e[type=armor_stand, c=1, x=~10, y=~0, z=~${z}]`
 
 
@@ -117,7 +124,7 @@ function defenders() {
     }
 
 
-    // --- 2.2. Defenders: swordsmen ---
+    // 2.2. Defenders: swordsmen
     // Layout: 2 lines x 30 figures
     let x = 12
 
@@ -128,7 +135,7 @@ function defenders() {
             // 2.2.1. Spawn and face orientation
             player.execute(`/summon armor_stand "§6Swordsman" ~${x} ~0 ~${z}`)
             player.execute(`/tp @e[type=armor_stand, c=1, x=~${x}, y=~0, z=~${z}] ~${x} ~0 ~${z} facing ~0 ~0 ~${z}`)
-
+    
             let search = `@e[type=armor_stand, c=1, x=~${x}, y=~0, z=~${z}]`
 
 
@@ -150,7 +157,7 @@ function defenders() {
     }
 
 
-    // --- 2.3. Defenders: archers ---
+    // 2.3. Defenders: archers
     // Layout: 1 line x 30 figures
     z = -29
 
@@ -176,7 +183,7 @@ function defenders() {
     }
 
 
-    // --- 2.4. Commander of defenders ---
+    // 2.4. Commander of defenders
     player.execute(`/summon armor_stand "§2Commander" ~6 ~0 ~0`)
     player.execute(`/tp @e[type=armor_stand, c=1, x=~6, y=~0, z=~0] ~6 ~0 ~0 facing ~-6 ~6 ~0`)
 
@@ -198,9 +205,9 @@ function defenders() {
 }
 
 
-// --- 3. Patrons ---
+// === 3. Patrons ===
 function patrons() {
-    // ===  3.1. Patron saint of attackers  ===
+    // 3.1. Patron saint of attackers
         // 3.1.1. Platform and figure
         blocks.fill(DIAMOND_BLOCK, pos(-3, 0, 30), pos(-7, 0, 34), FillOperation.Replace)
 
@@ -231,7 +238,7 @@ function patrons() {
     player.execute(`/playanimation @e[type = armor_stand, x=~-5, y=~6, z=~32, r=2, c=1] animation.ghast.scale a 9999999`)
 
 
-    // ===  3.2. Patron saint of defenders  ===
+    // 3.2. Patron saint of defenders
         // 3.2.1. Platform and figure
         blocks.fill(BLOCK_OF_NETHERITE, pos(3, 0, -30), pos(7, 0, -34), FillOperation.Replace)
 
