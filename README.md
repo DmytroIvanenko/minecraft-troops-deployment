@@ -17,8 +17,32 @@ This script automates the deployment of two opposing military factions (Attacker
 3. Click on **"New Project"** to enter the workspace.
 4. Select **JavaScript (MakeCode)** from the language toggle at the top of the editor.
 5. Paste the entire code from `troops_deployment.js` into the window.
-6. Return to the game world.
-7. Open the chat (press `T` or `Enter`) and simply type: **troops**
+
+   ## 📸 Project Gallery
+
+### Troop Formations
+| Attacking Forces | Defending Forces |
+| :---: | :---: |
+| ![Attackers 1](media/media/troops_001.jpg) | ![Defenders 1](media/media/troops_002.jpg) |
+| ![Attackers 2](media/media/troops_003.jpg) | ![Defenders 2](media/media/troops_004.jpg) |
+
+### Patrons & Commanders
+| Patron of Attackers | Patron of Defenders |
+| :---: | :---: |
+| ![Patron 1](media/media/troops_005.jpg) | ![Patron 2](media/media/troops_006.jpg) |
+
+<details>
+  <summary>🔍 Click to view more screenshots</summary>
+  
+  ![Troops 7](media/media/troops_007.jpg)
+  ![Troops 8](media/media/troops_008.jpg)
+  ![Troops 9](media/media/troops_009.jpg)
+  ![Troops 10](media/media/troops_010.jpg)
+  ![Troops 11](media/media/troops_011.jpg)
+  ![Troops 12](media/media/troops_012.jpg)
+</details>
+7. Return to the game world.
+8. Open the chat (press `T` or `Enter`) and simply type: **troops**
 
 ## ⚠️ Technical Note
 The scaling effect for "Patron" entities uses the `playanimation` command. For permanent stability across world reloads, it is recommended to mirror this command in a **Repeating Command Block** (Always Active) close to the entity's location.
