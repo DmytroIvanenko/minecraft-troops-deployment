@@ -46,3 +46,10 @@ This script automates the deployment of two opposing military factions (Attacker
 
 ## ⚠️ Technical Note
 The scaling effect for "Patron" entities uses the `playanimation` command. For permanent stability across world reloads, it is recommended to mirror this command in a **Repeating Command Block** (Always Active) close to the entity's location.
+
+---
+## ⚖️ License
+This project is licensed under the **MIT License**.
+
+**Original Concept & Development:** Dmytro (2026).
+Feel free to use, modify, and distribute this code for educational purposes. Attribution is greatly appreciated!
