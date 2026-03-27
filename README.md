@@ -51,5 +51,5 @@ The scaling effect for "Patron" entities uses the `playanimation` command. For p
 ## ⚖️ License
 This project is licensed under the **MIT License**.
 
-**Original Concept & Development:** Dmytro (2026).
+**Original Concept & Development:** Copyright (c) 2026 Dmytro Ivanenko (@DmytroIvanenko).
 Feel free to use, modify, and distribute this code for educational purposes. Attribution is greatly appreciated!
