@@ -21,4 +21,4 @@ This script automates the deployment of two opposing military factions (Attacker
 7. Open the chat (press `T` or `Enter`) and simply type: **troops**
 
 ## ⚠️ Technical Note
-The scaling effect for "Patron" entities uses the `playanimation` command. For permanent stability across world reloads, it is recommended to mirror this command in a **Repeating Command Block** (Always Active) at the entity's location.
+The scaling effect for "Patron" entities uses the `playanimation` command. For permanent stability across world reloads, it is recommended to mirror this command in a **Repeating Command Block** (Always Active) close to the entity's location.
