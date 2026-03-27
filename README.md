@@ -1,4 +1,4 @@
-# Automated Troop Deployment System (Minecraft Education)
+# Automated Troop Deployment System (Minecraft Education Edition)
 
 An educational project designed to demonstrate advanced programming concepts within **Minecraft Education Edition** using the **MakeCode JavaScript** environment.
 
