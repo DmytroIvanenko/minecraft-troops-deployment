@@ -9,7 +9,6 @@ This script automates the deployment of two opposing military factions (Attacker
 - **Nested Loops:** Efficiently generating 2D grids (rows x entities).
 - **Coordinate Systems:** Mastering relative coordinates (`~x ~y ~z`) for precise entity placement.
 - **Clean Code Practices:** Using `camelCase` naming conventions and modular function structures.
-- **Hybrid Logic:** Understanding the synergy between JavaScript code and in-game Command Blocks.
 - **Command Simulation:** Mastering `player.execute()` to trigger complex in-game commands directly from JavaScript, simulating manual console input via code.
 - **String Interpolation:** Using template literals (backticks `` ` `` and `${variable}` syntax) to dynamically merge string commands with numerical coordinate data for precise entity placement.
 - **Hybrid Logic:** Understanding the synergy between high-level JavaScript structures and the low-level Minecraft command engine.
